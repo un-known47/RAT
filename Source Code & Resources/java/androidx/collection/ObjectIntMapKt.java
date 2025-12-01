@@ -1,0 +1,105 @@
+package androidx.collection;
+
+import kotlin.jvm.internal.j;
+
+/* compiled from: r8-map-id-c8096209f0e2080d5582fbabe6f93271c3e851e14af30d598fd54a8437fc175f */
+/* loaded from: classes.dex */
+public final class ObjectIntMapKt {
+    private static final MutableObjectIntMap<Object> EmptyObjectIntMap = new MutableObjectIntMap<>(0);
+
+    public static final <K> ObjectIntMap<K> emptyObjectIntMap() {
+        MutableObjectIntMap<Object> mutableObjectIntMap = EmptyObjectIntMap;
+        j.c(mutableObjectIntMap, "null cannot be cast to non-null type androidx.collection.ObjectIntMap<K of androidx.collection.ObjectIntMapKt.emptyObjectIntMap>");
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf() {
+        return new MutableObjectIntMap<>(0, 1, null);
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMap() {
+        MutableObjectIntMap<Object> mutableObjectIntMap = EmptyObjectIntMap;
+        j.c(mutableObjectIntMap, "null cannot be cast to non-null type androidx.collection.ObjectIntMap<K of androidx.collection.ObjectIntMapKt.objectIntMap>");
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMapOf(K k2, int i2) {
+        MutableObjectIntMap mutableObjectIntMap = new MutableObjectIntMap(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf(K k2, int i2) {
+        MutableObjectIntMap<K> mutableObjectIntMap = new MutableObjectIntMap<>(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMapOf(K k2, int i2, K k3, int i3) {
+        MutableObjectIntMap mutableObjectIntMap = new MutableObjectIntMap(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf(K k2, int i2, K k3, int i3) {
+        MutableObjectIntMap<K> mutableObjectIntMap = new MutableObjectIntMap<>(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4) {
+        MutableObjectIntMap mutableObjectIntMap = new MutableObjectIntMap(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4) {
+        MutableObjectIntMap<K> mutableObjectIntMap = new MutableObjectIntMap<>(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4, K k5, int i5) {
+        MutableObjectIntMap mutableObjectIntMap = new MutableObjectIntMap(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        mutableObjectIntMap.set(k5, i5);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4, K k5, int i5) {
+        MutableObjectIntMap<K> mutableObjectIntMap = new MutableObjectIntMap<>(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        mutableObjectIntMap.set(k5, i5);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> ObjectIntMap<K> objectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4, K k5, int i5, K k6, int i6) {
+        MutableObjectIntMap mutableObjectIntMap = new MutableObjectIntMap(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        mutableObjectIntMap.set(k5, i5);
+        mutableObjectIntMap.set(k6, i6);
+        return mutableObjectIntMap;
+    }
+
+    public static final <K> MutableObjectIntMap<K> mutableObjectIntMapOf(K k2, int i2, K k3, int i3, K k4, int i4, K k5, int i5, K k6, int i6) {
+        MutableObjectIntMap<K> mutableObjectIntMap = new MutableObjectIntMap<>(0, 1, null);
+        mutableObjectIntMap.set(k2, i2);
+        mutableObjectIntMap.set(k3, i3);
+        mutableObjectIntMap.set(k4, i4);
+        mutableObjectIntMap.set(k5, i5);
+        mutableObjectIntMap.set(k6, i6);
+        return mutableObjectIntMap;
+    }
+}

@@ -1,0 +1,103 @@
+package okhttp3.internal.http2;
+
+import java.util.Arrays;
+import kotlin.jvm.internal.j;
+
+/* compiled from: r8-map-id-c8096209f0e2080d5582fbabe6f93271c3e851e14af30d598fd54a8437fc175f */
+/* loaded from: classes.dex */
+public final class Settings {
+    public static final int COUNT = 10;
+    public static final Companion Companion = new Companion(null);
+    public static final int DEFAULT_INITIAL_WINDOW_SIZE = 65535;
+    public static final int ENABLE_PUSH = 2;
+    public static final int HEADER_TABLE_SIZE = 1;
+    public static final int INITIAL_WINDOW_SIZE = 4;
+    public static final int MAX_CONCURRENT_STREAMS = 3;
+    public static final int MAX_FRAME_SIZE = 5;
+    public static final int MAX_HEADER_LIST_SIZE = 6;
+    private int set;
+    private final int[] values = new int[10];
+
+    /* compiled from: r8-map-id-c8096209f0e2080d5582fbabe6f93271c3e851e14af30d598fd54a8437fc175f */
+    public static final class Companion {
+        public /* synthetic */ Companion(kotlin.jvm.internal.e eVar) {
+            this();
+        }
+
+        private Companion() {
+        }
+    }
+
+    public final void clear() {
+        this.set = 0;
+        int[] iArr = this.values;
+        int length = iArr.length;
+        j.e(iArr, "<this>");
+        Arrays.fill(iArr, 0, length, 0);
+    }
+
+    public final int get(int i2) {
+        return this.values[i2];
+    }
+
+    public final boolean getEnablePush(boolean z2) {
+        return (this.set & 4) != 0 ? this.values[2] == 1 : z2;
+    }
+
+    public final int getHeaderTableSize() {
+        if ((this.set & 2) != 0) {
+            return this.values[1];
+        }
+        return -1;
+    }
+
+    public final int getInitialWindowSize() {
+        if ((this.set & 16) != 0) {
+            return this.values[4];
+        }
+        return 65535;
+    }
+
+    public final int getMaxConcurrentStreams() {
+        if ((this.set & 8) != 0) {
+            return this.values[3];
+        }
+        return Integer.MAX_VALUE;
+    }
+
+    public final int getMaxFrameSize(int i2) {
+        return (this.set & 32) != 0 ? this.values[5] : i2;
+    }
+
+    public final int getMaxHeaderListSize(int i2) {
+        return (this.set & 64) != 0 ? this.values[6] : i2;
+    }
+
+    public final boolean isSet(int i2) {
+        return ((1 << i2) & this.set) != 0;
+    }
+
+    public final void merge(Settings other) {
+        j.e(other, "other");
+        for (int i2 = 0; i2 < 10; i2++) {
+            if (other.isSet(i2)) {
+                set(i2, other.get(i2));
+            }
+        }
+    }
+
+    public final Settings set(int i2, int i3) {
+        if (i2 >= 0) {
+            int[] iArr = this.values;
+            if (i2 < iArr.length) {
+                this.set = (1 << i2) | this.set;
+                iArr[i2] = i3;
+            }
+        }
+        return this;
+    }
+
+    public final int size() {
+        return Integer.bitCount(this.set);
+    }
+}

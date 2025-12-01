@@ -1,0 +1,39 @@
+package androidx.core.app;
+
+import android.content.res.Configuration;
+import androidx.annotation.RequiresApi;
+import kotlin.jvm.internal.j;
+
+/* compiled from: r8-map-id-c8096209f0e2080d5582fbabe6f93271c3e851e14af30d598fd54a8437fc175f */
+/* loaded from: classes.dex */
+public final class MultiWindowModeChangedInfo {
+    private final boolean isInMultiWindowMode;
+
+    @RequiresApi(26)
+    private Configuration newConfiguration;
+
+    public MultiWindowModeChangedInfo(boolean z2) {
+        this.isInMultiWindowMode = z2;
+    }
+
+    @RequiresApi(26)
+    public final Configuration getNewConfig() {
+        Configuration configuration = this.newConfiguration;
+        if (configuration != null) {
+            return configuration;
+        }
+        throw new IllegalStateException("MultiWindowModeChangedInfo must be constructed with the constructor that takes a Configuration to access the newConfig. Are you running on an API 26 or higher device that makes this information available?");
+    }
+
+    public final boolean isInMultiWindowMode() {
+        return this.isInMultiWindowMode;
+    }
+
+    /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
+    @RequiresApi(26)
+    public MultiWindowModeChangedInfo(boolean z2, Configuration newConfig) {
+        this(z2);
+        j.e(newConfig, "newConfig");
+        this.newConfiguration = newConfig;
+    }
+}
